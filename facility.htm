@@ -1,0 +1,298 @@
+<HTML>
+<HEAD>
+    <TITLE>Facility</TITLE>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        span{
+            font:bold;font-size:25px;
+        }
+        body {
+            background-image: url(pexels-photo-277572.jpg);
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image slidebig (needed to position the left and right arrows) */
+        .slidebig {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .bigpic {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+        /* Number text (1/3 etc) */
+        .details {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* slidebig for image text */
+        .caption-slidebig {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six smallpigs side by side */
+        .smallpig {
+            float: left;
+            width: 16.66%;
+        }
+        .smallpig img{
+            height:150px;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+    </style>
+
+</HEAD>
+<BODY>
+    <div class="menu" style="position:fixed;overflow:hidden;z-index: 9998!important;">
+        <nav>
+            <a href="home.htm">Home</a>
+            <a href="booking.htm">Book a room</a>
+            <a style="background-color:limegreen;border-radius: 25px;" href="facility.htm">Facility</a>
+            <a href="event.htm">Events</a>
+            <a href="aboutus.htm">About us</a>
+            <a href="signin.htm">Sign in</a>
+        </nav>
+    </div>
+
+    <br /><br /><br />
+    <h2 style="text-align:center">Brief overview of our facilities:</h2>
+    <div class="slidebig">
+        <div class="bigpic">
+            <div class="details">1 / 6</div>
+            <img src="../assignment2imi/images/T4.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <div class="bigpic">
+            <div class="details">2 / 6</div>
+            <img src="../assignment2imi/images/room-background.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <div class="bigpic">
+            <div class="details">3 / 6</div>
+            <img src="../assignment2imi/images/dscf9826.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <div class="bigpic">
+            <div class="details">4 / 6</div>
+            <img src="../assignment2imi/images/faci.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <div class="bigpic">
+            <div class="details">5 / 6</div>
+            <img src="../assignment2imi/images/WS10.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <div class="bigpic">
+            <div class="details">6 / 6</div>
+            <img src="../assignment2imi/images/IMG_4383-1.jpg" style="width:100%;height:700px;">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"> < </a>
+        <a class="next" onclick="plusSlides(1)"> > </a>
+
+        <div class="caption-slidebig">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/T4.jpg" style="width:100%" onclick="currentSlide(1)" alt="Shops">
+            </div>
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/room-background.jpg" style="width:100%" onclick="currentSlide(2)" alt="Hotel room">
+            </div>
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/dscf9826.jpg" style="width:100%" onclick="currentSlide(3)" alt="Blend with nature">
+            </div>
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/faci.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pool">
+            </div>
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/WS10.jpg" style="width:100%" onclick="currentSlide(5)" alt="wedding room">
+            </div>
+            <div class="smallpig">
+                <img class="demo cursor" src="../assignment2imi/images/IMG_4383-1.jpg" style="width:100%" onclick="currentSlide(6)" alt="Gym">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("bigpic");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script><br />
+
+    <h2>Available services:</h2>
+    <div style="position:relative;height:300px;">
+
+        <article style="position:absolute;left:5%;top:2%; ">
+            <i class="material-icons">&#xe63e;</i><!-- icon --><span>Internet</span><br />
+            WiFi is available in all rooms.
+        </article>
+
+        <article style="position:absolute;left:40%;top:2%; ">
+            <i class="material-icons"> 	&#xe54f;</i><!-- icon --><span>Parking</span><br />
+            Free private parking is available on site.
+        </article>
+
+        <article style="position:absolute;left:75%;top:2%; ">
+            <i class="material-icons">&#xe91d;</i><!-- icon -->
+            <span>Pets</span><br />
+            Pets are allowed.
+        </article>
+
+        <article style="position:absolute;left:5%;top:30%; ">
+            <i class="material-icons">&#xeb48;</i><!-- icon -->
+            <span>Pools</span><br />
+            Private Beach Area Outdoor Pool
+        </article>
+
+        <article style="position:absolute;left:40%;top:30%;">
+            <i class="material-icons"> 	&#xe544;</i><!-- icon -->
+            <span>Food and drink</span><br />
+            Room Service<br />
+            Restaurant
+        </article>
+
+        <article style="position:absolute;left:75%;top:30%;">
+            <i class="material-icons"> 	&#xeb4c;</i><!-- icon -->
+            <span>Spa and wellness</span><br />
+            Sauna
+        </article>
+
+        <article style="position:absolute;left:5%;top:60%;">
+            <i class="material-icons"> 	&#xe531;</i><!-- icon -->
+            <span>Transportation</span><br />
+            Car Rental
+        </article>
+
+        <article style="position:absolute;left:40%;top:60%;">
+            <i class="material-icons"> &#xe1ac;</i><!-- icon -->
+            <span>Activities</span><br />
+            Pool Table  – FREE
+            Beachfront
+            Tennis Court  – FREE
+        </article>
+
+        <article style="position:absolute;left:75%;top:60%;">
+            <i class="material-icons"> 	&#xe7fe;</i><!-- icon -->
+            <span>Cleaning service</span><br />
+            Dry Cleaning
+            Ironing Service
+            Laundry
+        </article>
+
+
+    </div>
+
+
+    <!-- nav bar bottom page-->
+    <div class="botnav" style="background-color:royalblue;position:relative;height:150px; clear:both;">
+        <div style="position:absolute;left:10%;top:3%;">
+            <p style="font-size:20px;">connect with us: </p>
+            <a href="https://facebook.com/"><img style="border-radius: 25px;" src="../assignment2imi/images/logofb.png" alt="fb logo" height="50" width="50" /></a>
+            <a href="https://youtube.com/"><img style="border-radius: 25px;" src="../assignment2imi/images/youtubelogo.jpg" alt="fb logo" height="50" width="50" /></a>
+            <a href="https://twitter.com/?lang=en"><img style="border-radius: 25px;" src="../assignment2imi/images/tweetlogo.png" alt="tw logo" height="50" width="50" /></a>
+        </div>
+        <div style="position:absolute;left:30%;top:5%; line-height:10px;">
+            <p style="font-size:20px;">contact information:</p>
+            <p>phone no: +65 1234 5678</p>
+            <p>email: placeholder@domain.com</p>
+            <p>hotline: +65 999</p>
+        </div>
+        <div style="position:absolute;left:85%;top:20%">
+            <img src="..\assignment2imi\images\EBF3 icon small.png" height="75" width="75" />
+        </div>
+        <div style="position:absolute;left:60%;top:15%;">
+            <a href="aboutus.htm" style="text-decoration:none;color:snow;font-size:25px;">About us</a>
+        </div>
+    </div>
+
+</BODY>
+</HTML>

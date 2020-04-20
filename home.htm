@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+
+    <TITLE>Home page</TITLE>
+
+    <style type="text/css">
+        #topbar {
+            background-image: url(../assignment2imi/images/home.jpg);
+        }
+
+        #intro, #event {
+            background: url(../assignment2imi/images/cornelia-de-luxe-resort-8.jpg) no-repeat fixed;
+            background-size: cover; /*this is background for whole page*/
+            color: white;
+        }
+
+        #facility {
+            background-color: lightblue;
+        }
+
+        #signin {
+            text-decoration: none;
+            position: absolute;
+            top: 5%;
+            left: 89%;
+            background-color: yellow;
+            padding: 1% 2% 1% 2%;
+            border: 1px solid gold;
+            color: black;
+            font-size: 20px;
+        }
+
+        #topbar, #review, #facility {
+            height: 700px;
+            width: 100%;
+        }
+
+        #leftbar {
+            float: left;
+            width: 95%;
+        }
+
+        #welcome {
+            font-family: Vivaldi;
+            font-size: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        #book {
+            text-decoration: none;
+            border: 2px solid green;
+            float: right;
+            margin-right: 3%;
+            margin-bottom: 3%;
+            padding: 2%;
+            background-color: aquamarine;
+            color: black;
+            font-size: 30px;
+        }
+         #boutus{
+            text-decoration: none;
+            border: 2px solid purple;
+            float: right;
+            margin-right: 3%;
+            margin-bottom: 3%;
+            padding: 2%;
+            background-color: mediumpurple;
+            color: black;
+            font-size: 30px;
+        }
+        /*display:inline-block;*/
+        #explore {
+            text-decoration: none;
+            border: 2px solid lightcoral;
+            position: absolute;
+            right: 60%;
+            top: 73%;
+            /*float: right;
+            margin-right: 3%;
+            margin-bottom: 3%;*/
+            padding: 2%;
+            background-color: lightcoral;
+            color: black;
+            font-size: 30px;
+        }
+
+        #evlink {
+            text-decoration: none;
+            border: 2px solid gold;
+            float: right;
+            margin-right: 3%;
+            margin-bottom: 3%;
+            margin-top: 10%;
+            padding: 2%;
+            background-color: yellow;
+            color: black;
+            font-size: 30px;
+        }
+
+        .discription {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            letter-spacing: 2px;
+            font: bold;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    </style>
+
+</HEAD>
+
+<BODY>
+
+
+    <div id="topbar">
+        <div id="leftbar">
+        </div>
+        <a href="signin.htm" id="signin">Sign in</a>
+        <div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <p id="welcome">Welcome to hotel The International</p>
+            <br /><br /><br /><br /><br /><br /><br />
+            <a href="booking.htm" id="book">Book now</a>
+        </div>
+    </div>
+
+    <div id="intro" style="margin-top:1%; padding-top:10%;padding-left:7%; width:93%;height:600px;">
+        <br />
+        <h1>Introduction</h1>
+        <p class="discription">The International is an astonishing hotel/resort world where you can take a break from stressful works.</p>
+        <p class="discription">Located at Northern Cyprus Bafra Iskele locality, at a distance of 25 kilometers to the city center,<br /> 65 kilometers to Ercan Airport and 40 kilometers to Famagusta.</p>
+        <p class="discription">The International, the newest link in the Limak hotels chain, receiving the inspiration for its unmatched<br /> service from the Phoenix legend, will be taken into service in 2018. The Phoenix legend inspires the<br /> timeframe (holiday) when people re-create and refresh themselves.</p>
+        <a href="aboutus.htm" id="boutus">Connect with us</a>
+    </div>
+    <br />
+    <div id="facility" style="position:relative;">
+
+        <div style="position:absolute; left:10%;right:60%;top:5%; bottom:5%;">
+            <h1>Our facilities</h1>
+            <p class="discription">The International will offer a different holiday experience by its capacity of 598 rooms, 1338 beds with alternative accommodation options, ultra all-inclusive concept and unmatched nature.</p>
+        </div>
+        <a id="explore" href="facility.htm">Explore</a>
+        <div style="position:absolute; left:50%;">
+            <img src="../assignment2imi/images/Limak-Cyprus-Deluxe-Hotel.jpg" alt="hotelpic1" style="width:100%;height:350px;" />
+            <img src="../assignment2imi/images/pexels-photo-260922.jpg" style="width:100%;height:350px; top:325px;" alt="restau_pic" />
+        </div>
+    </div>
+
+    <div id="event" style="margin-top:1%;margin-bottom:1%; padding-top:20%;padding-left:7%;width:93%;height:500px;">
+        <h1>Want to host an event at our place?</h1>
+        <p class="discription">Founded in in 2018, we offer project and contracting<br> services in a wide variety such as conferences, wedding, private meeting,... </p>
+        <a id="evlink" href="event.htm">Link to event</a>
+    </div>
+
+    <!-- nav bar bottom page-->
+    <div style="background-color:royalblue;position:relative;height:150px;">
+        <div style="position:absolute;left:10%;top:3%;">
+            <p style="font-size:20px;">connect with us: </p>
+            <a href="https://facebook.com/"><img style="border-radius: 25px;" src="../assignment2imi/images/logofb.png" alt="fb logo" height="50" width="50" /></a>
+            <a href="https://youtube.com/"><img style="border-radius: 25px;" src="../assignment2imi/images/youtubelogo.jpg" alt="fb logo" height="50" width="50" /></a>
+            <a href="https://twitter.com/?lang=en"><img style="border-radius: 25px;" src="../assignment2imi/images/tweetlogo.png" alt="tw logo" height="50" width="50" /></a>
+        </div>
+        <div style="position:absolute;left:30%;top:5%; line-height:10px;">
+            <p style="font-size:20px;">contact information:</p>
+            <p>phone no: +65 1234 5678</p>
+            <p>email: placeholder@domain.com</p>
+            <p>hotline: +65 999</p>
+        </div>
+        <div style="position:absolute;left:85%;top:20%">
+            <a href="home.htm/#"><img src="..\assignment2imi\images\EBF3 icon small.png" height="75" width="75" /></a>
+        </div>
+        <div style="position:absolute;left:60%;top:15%;">
+            <a href="aboutus.htm" style="text-decoration:none;color:snow;font-size:25px;">About us</a>
+        </div>
+    </div>
+
+
+
+
+
+</BODY>
+</HTML>
+
